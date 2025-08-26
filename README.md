@@ -12,6 +12,6 @@ Describe and compare the speed between CPU and GPU
     - GPU Naive Matrix Multiplication: use PyTorch on GPU
     - GPU Tiled Shared Memory Matrix Multiplication: use PyTorch/CUDA on GPU
     - When I run run_benchmark.py, I see the following results:
-        + The execution time on the CPU will be very slow, especially with large matrices (e.g. 2048x2048): 
-        + The execution time on the GPU (Naive) will be significantly faster, proving that the GPU is superior in parallel processing: 
-        + The execution time on the GPU (Tiled Shared Memory) will be faster than the GPU Naive, which is evidence that the optimization using shared memory helps reduce I/O and speed up the computation: 
+        + The execution time on the CPU will be very slow, especially with large matrices (e.g. 2048x2048): 20 times
+        + The execution time on the GPU (Naive) will be significantly faster, proving that the GPU is superior in parallel processing: 8 times
+        + The execution time on the GPU (Tiled Shared Memory) will be faster than the GPU Naive, which is evidence that the optimization using shared memory helps reduce I/O and speed up the computation: 15 times

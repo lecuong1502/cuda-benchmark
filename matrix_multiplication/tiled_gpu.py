@@ -9,7 +9,9 @@ import time
 
 cuda_source = """
 #include <cuda.h>
-__global__ void tiled_matmul_kernel(const float* A, const float* B, float* C, int M, int N, int K) {
+#include <torch/extension.h>
+
+extern "C" __global__ void tiled_matmul_kernel(const float* A, const float* B, float* C, int M, int N, int K) {
     // The size of tile
     const int TILE_SIZE = 32;
 
